@@ -18,4 +18,19 @@ public class VelogRequest {
         String username;
         int limit;
     }
+
+    @Getter
+    @Builder
+    public static class Post {
+        String operationName;
+        PostVariables variables;
+        String query;
+    }
+
+    @Getter
+    @Builder
+    public static class PostVariables {
+        String username;
+        String url_slug;
+    }
 }

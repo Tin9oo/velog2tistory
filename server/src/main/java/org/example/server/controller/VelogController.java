@@ -1,7 +1,7 @@
 package org.example.server.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.server.model.VelogListInfo;
+import org.example.server.model.VelogInfo;
 import org.example.server.service.VelogService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +18,7 @@ public class VelogController {
 
     @GetMapping("{username}")
     public void velogList(@PathVariable("username") String username) {
-        ArrayList<VelogListInfo> arrayList =  velogService.getVelogList(username);
+        ArrayList<VelogInfo.List> velogList =  velogService.getVelogList(username);
+        velogService.getVelogPost(velogList, username);
     }
 }
