@@ -29,6 +29,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     implementation 'io.netty:netty-resolver-dns-native-macos:4.1.68.Final:osx-aarch_64'
     implementation 'org.json:json:20190722'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.19.1'
 }
 
 tasks.named('test') {
